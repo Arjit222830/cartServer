@@ -1,5 +1,5 @@
 {
-    "db": "mongodb://localhost/cartServer",
+    "db": "mongodb://localhost/cartServerArjit",
     "email": "admin@gmail.com",
     "password": "123",
     "jwtPrivateKey": "test"

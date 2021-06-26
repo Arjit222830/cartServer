@@ -1,0 +1,6 @@
+{
+    "db": "mongodb://localhost/cartServer",
+    "email": "admin@gmail.com",
+    "password": "123",
+    "jwtPrivateKey": "test"
+}

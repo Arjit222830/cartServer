@@ -1,7 +1,7 @@
 const express= require('express');
 const router= express.Router();
 const {Offer} = require('../models/offer');
-const {SubCategory} = require('../models/subCategory');
+const {Subcategory} = require('../models/subcategory');
 const formidable = require("formidable");
 const fs = require("fs");
 const authAdmin = require('../middleware/authAdmin');
@@ -24,7 +24,7 @@ router.get('/show',authAdmin,async (req, res) => {
 });
 
 router.get('/createForm' , authAdmin,async(req,res)=>{
-    let subCategories = await SubCategory.find();
+    let subCategories = await Subcategory.find();
     res.render('offerForm.ejs', {
         link: '/offer/newImg',
         title: "Add Offer Image",
@@ -84,7 +84,7 @@ router.post('/newImg',authAdmin,async (req, res) => {
 });
 
 router.get('/editForm/:id',async(req , res)=>{
-  let subCategories = await SubCategory.find();
+  let subCategories = await Subcategory.find();
   const offer = await Offer.findById(req.params.id).populate('photo.subCategory');
   
   if (!offer) return res.status(404).send("Given ID was not found");

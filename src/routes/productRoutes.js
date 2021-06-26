@@ -4,7 +4,7 @@ const _ = require('lodash');
 const formidable = require("formidable");
 const fs = require("fs");
 const { Cart } = require('../models/cart');
-const {SubCategory} = require('../models/subCategory');
+const {SubCategory}= require('../models/subCategory');
 const {Product}= require('../models/product');
 const authAdmin = require('../middleware/authAdmin');
 
